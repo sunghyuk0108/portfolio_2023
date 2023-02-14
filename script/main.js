@@ -303,10 +303,19 @@ const contents = [
     linkName: "chrome",
     title: "바닐라 자바스크립트로 제작한 IPAD",
     explanation:
-      "노마트 코더 사이트의 자바스크립트 공부를 하면서 제작한 iPad앱 바닐라 자바스크립트를 활용한 todo-list, 날씨 api 활용한 앱등 다양한 APP을 볼 수 있습니다.",
+      "노마드 코더 사이트의 자바스크립트 공부를 하면서 제작한 iPad앱 바닐라 자바스크립트를 활용한 todo-list, 날씨 api 활용한 앱등 다양한 APP을 볼 수 있습니다.",
     htmlSource: "#2",
     cssSource: "#2",
     javascriptSource: "#2",
+  },
+  {
+    name: "meme_maker",
+    linkName: "meme_maker",
+    title: "밈 생성기",
+    explanation: "javascript canvas를 활용한 밈 생성기",
+    htmlSource: "#3",
+    cssSource: "#3",
+    javascriptSource: "#3",
   },
   {
     name: "apple",
@@ -316,7 +325,7 @@ const contents = [
     htmlSource: "#3",
     cssSource: "#3",
     javascriptSource: "#3",
-  },
+  }
 ];
 
 // 이걸 다시 재사용성을 고려해서 리팩토링 해보기!
