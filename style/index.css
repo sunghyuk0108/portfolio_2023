@@ -19,9 +19,9 @@ body{background-color: #000;}
 #intro_in_portfolio_box {width: 300px; height: 300px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; border-radius: 300px; border: 1px solid #000; z-index: 2; opacity: 0.6;}
 #intro_in_portfolio_box:hover {cursor: pointer;}
 .intro_in_portfolio_inbox {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; border-radius: 100%;}
-.intro_in_portfolio_inbox:nth-child(1) {width: 85%; height: 85%; border: 1px solid rgba(255,255,255,1);}
-.intro_in_portfolio_inbox:nth-child(2) {width: 80%; height: 80%; border: 1px solid rgba(255,255,255,0.75);}
-.intro_in_portfolio_inbox:nth-child(3) {width: 75%; height: 75%; border: 1px solid rgba(255,255,255,0.5);}
+.intro_in_portfolio_inbox:nth-child(1) {width: 85%; height: 85%; border: 1px solid rgba(255,255,255,1); transition: 0.3s;}
+.intro_in_portfolio_inbox:nth-child(2) {width: 80%; height: 80%; border: 1px solid rgba(255,255,255,0.75); transition: 0.3s;}
+.intro_in_portfolio_inbox:nth-child(3) {width: 75%; height: 75%; border: 1px solid rgba(255,255,255,0.5); transition: 0.3s;}
 
 #intro_text {width: 100%; height: 20px; position: absolute; left: 0; right: 0; bottom: 100px; margin: auto; opacity: 0.6;}
 #intro_text p{font-size: 16px; line-height: 20px; color: #fff; text-transform: uppercase; font-weight: 500; text-align: center;}
