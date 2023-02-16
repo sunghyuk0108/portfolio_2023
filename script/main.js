@@ -158,6 +158,7 @@ const createLink = (outerElement, num) => {
   const createLink = document.createElement("a");
   createLink.innerHTML = outerElement.outerHTML;
   createLink.setAttribute("href", `./${contents[num].linkName}/index.html`);
+  createLink.setAttribute("target", "_blank");
   outerElement.parentNode.insertBefore(createLink, outerElement);
   outerElement.remove();
 }
@@ -175,6 +176,7 @@ const createContent = (num) => {
   const p = document.createElement("p");
   const button = document.createElement("button");
   const ul = document.createElement("ul");
+  const linkTarget = `target="_blank"`
 
   newDiv.classList.add("javascript_protfolio");
   secondDiv.classList.add(`${contents[num].name}`);
@@ -186,9 +188,9 @@ const createContent = (num) => {
   p.innerHTML = `${contents[num].explanation}`;
   ul.classList.add("language");
   ul.innerHTML = `<li><p>category source(click!)</p></li>
-  <li><a href="${contents[num].htmlSource}"><p>html</p></a></li>
-  <li><a href="${contents[num].cssSource}"><p>css</p></a></li>
-  <li><a href="${contents[num].javascriptSource}"><p>javascript</p></a></li>`;
+  <li><a href="${contents[num].htmlSource}" ${linkTarget}><p>html</p></a></li>
+  <li><a href="${contents[num].cssSource}" ${linkTarget}><p>css</p></a></li>
+  <li><a href="${contents[num].javascriptSource}" ${linkTarget}><p>javascript</p></a></li>`;
   //   ul.classList.add("language");
   //   ul.innerHTML = `${li.outerHTML} ${li.outerHTML} ${li.outerHTML} ${li.outerHTML}`;
   //   li.parentNode.insertBefore(ul, li);
@@ -202,6 +204,37 @@ for (let i = 0; i < contents.length; i++) {
   let num = i;
   createContent(num);
 }
+
+const responsiveButton = document.querySelector(".responsive_bt")
+const pcButton = document.querySelector(".pc_bt")
+const responsiveWork = document.querySelector("#responsive_work");
+const pcWork = document.querySelector("#pc_work");
+
+
+const responsiveOn = () => {
+  responsiveWork.classList.add("displayOn");
+  responsiveWork.classList.remove("displayOff");
+  pcWork.classList.add("displayOff");
+  pcWork.classList.remove("displayOn");
+  responsiveButton.style.backgroundColor = "#00ff96";
+  responsiveButton.style.color = "#000000";
+  pcButton.style.backgroundColor = "transparent";
+  pcButton.style.color = "#ffffff";
+}
+
+const pcOn = () => {
+  pcWork.classList.add("displayOn");
+  pcWork.classList.remove("displayOff");
+  responsiveWork.classList.add("displayOff");
+  responsiveWork.classList.remove("displayOn");
+  pcButton.style.backgroundColor = "#00ff96";
+  pcButton.style.color = "#000000";
+  responsiveButton.style.backgroundColor = "transparent";
+  responsiveButton.style.color = "#ffffff";
+}
+
+responsiveButton.addEventListener("click", responsiveOn);
+pcButton.addEventListener("click", pcOn);
 
 // jquery 시작
 $(document).ready(function () {
