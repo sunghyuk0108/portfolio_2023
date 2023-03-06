@@ -102,6 +102,7 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
+  animation: rotate infinite 10s;
 }
 #intro_in_portfolio_box {
   width: 300px;
@@ -346,6 +347,7 @@ nav {
   text-transform: uppercase;
   margin-top: 50px;
   opacity: 0;
+  transition: 0.5s;
 }
 #portfolio_about_me_main_inbox_top h3 {
   width: 100%;
@@ -357,6 +359,7 @@ nav {
   margin-top: 50px;
   text-transform: uppercase;
   opacity: 0;
+  transition: 0.6s;
 }
 #portfolio_about_me_main_inbox_top h2 {
   width: 100%;
@@ -369,6 +372,7 @@ nav {
   font-family: "Caveat", cursive;
   margin-top: 50px;
   opacity: 0;
+  transition: 0.7s;
 }
 
 #portfolio_about_me_main_inbox_bottom {
@@ -446,6 +450,7 @@ nav {
   width: 0%;
   height: 100%;
   background-color: #00ff96;
+  transition: 0.8s;
 }
 
 #portfolio_about_me_main_right_box {
@@ -471,65 +476,15 @@ nav {
   text-transform: uppercase;
   opacity: 0;
   margin-top: 100px;
+  transition: 0.8s;
 }
 
-#main_work {
-  margin: auto;
-  margin-top: 100px;
-  overflow: hidden;
-  opacity: 0;
-  border: 1px solid #fff;
-  padding: 25px;
-}
-#main_work > h3 {
-  height: 18px;
-  font-size: 18px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 300;
-  margin-top: 20px;
-}
 .ader {
   width: 100%;
   height: 350px;
   background: url(../images/ader_thumbnail.png) center no-repeat;
   background-size: cover;
   box-sizing: border-box;
-}
-#main_work > h4 {
-  width: 100%;
-  height: 18px;
-  font-size: 18px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 300;
-  margin-top: 20px;
-}
-#main_work > p {
-  color: #fff;
-  font-size: 16px;
-  margin-top: 20px;
-  font-weight: 300;
-}
-#main_work button {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #000;
-  border-radius: 100px;
-  background-color: #fff;
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #000;
-  transition: 0.3s;
-}
-#main_work button:hover {
-  background-color: #00ff96;
-  color: #000;
-  cursor: pointer;
-  border: 1px solid #fff;
 }
 
 .javascript_protfolio {
@@ -541,6 +496,7 @@ nav {
 .works_box {
   margin: auto;
   padding: 25px;
+  opacity: 0;
 }
 .ipad {
   width: 100%;
@@ -830,4 +786,17 @@ footer h6 {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+/* keyprame animation */
+@keyframes rotate {
+  from {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }
