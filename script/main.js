@@ -479,8 +479,4 @@ $(document).ready(function () {
     x = e.pageX-($('#mouse_pointer').width()/2);
     y = e.pageY-($('#mouse_pointer').height()/2);
     });*/
-  $("#samo").animate({ "margin-top": "12px" }, 500, function samo() {
-    $("#samo").animate({ "margin-top": "0" }, 300);
-    $("#samo").animate({ "margin-top": "12px" }, 500, samo);
-  });
 });

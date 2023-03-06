@@ -263,6 +263,7 @@ nav {
   border-bottom: 18px solid transparent;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
+  animation: margin_move 1s infinite;
 }
 
 #portfolio_main {
@@ -798,5 +799,17 @@ footer h6 {
   }
   to {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes margin_move {
+  from {
+    margin-top: 12px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 12px;
   }
 }
